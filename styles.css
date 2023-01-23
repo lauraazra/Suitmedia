@@ -38,6 +38,27 @@ nav ul li a:hover{
 }
 
 
+nav ul li .dropdown .droplink{
+    display: none;
+}
+
+nav ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+}
+
+nav ul li:hover .dropdown .droplink{
+    cursor: pointer;
+    display: block;
+    margin: 25px 0px 25px 15px;
+    width: 210px;
+    height: 20px;
+    z-index: 1;
+}
+
+
 /* responsive nav */
 
 /* hamburger menu */
@@ -359,6 +380,3 @@ footer p{
     margin-top: 15px;
 }
 
-.dropdwon{
-    display: none;
-}
