@@ -31,12 +31,33 @@ nav ul li a{
     color: rgb(107, 105, 105);
     text-decoration: none;
     font-size: 0.8em;
+    padding: 16px 14px;
 }
 
 nav ul li a:hover{
-    color: black;
+    background-color: #F4F4F4;
 }
 
+
+nav ul li .dropdown .droplink{
+    display: none;
+}
+
+nav ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+}
+
+nav ul li:hover .dropdown .droplink {
+    cursor: pointer;
+    display: block;
+    padding:20px;
+    width: 190px;
+    height: 20px;
+    z-index: 1;
+}
 
 /* responsive nav */
 
@@ -90,6 +111,17 @@ nav ul li a:hover{
     transform: rotate(-45deg) translate(-1px, 0);
 }
 
+@media screen and (max-width: 1384px) {
+    nav ul{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    nav ul{
+        width: 30%;
+    }
+}
+
 /* normal screen */
 @media screen and (max-width: 992px) {
     nav ul{
@@ -107,6 +139,16 @@ nav ul li a:hover{
         border-radius: 20%;
     }
 }
+
+@media screen and (max-width: 692px){
+    nav ul{
+        width: 50%;
+    }
+    .dot{
+        border-radius: 20%;
+    }
+}
+
 
 /* ukuran mobile */
 @media screen and (max-width: 576px){
@@ -340,6 +382,7 @@ footer{
     display: grid;
     place-items: center;
     align-content: center;
+    margin-top: 50px;
     background-color: #333333;
     color: white;
 }
@@ -359,6 +402,3 @@ footer p{
     margin-top: 15px;
 }
 
-.dropdwon{
-    display: none;
-}
